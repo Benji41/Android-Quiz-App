@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Quiz App</string>
     <string name="btn_register_text">Go!</string>
-    <string name="editT_register_hint">Nombre:</string>
+    <string name="editT_register_hint">Right here</string>
+    <string name="greeting">Welcome</string>
+    <string name="greeting_subtitle">Please enter your name</string>
 </resources>
