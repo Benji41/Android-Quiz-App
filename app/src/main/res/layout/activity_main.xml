@@ -4,26 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="@drawable/ic_bg"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
         android:gravity="center"
+        android:shadowColor="@color/black"
+        android:shadowRadius="2"
         android:text="@string/app_name"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="50dp"/>
+        android:textAllCaps="false"
+        android:textColor="@color/custom_blue"
+        android:textSize="48sp"
+        android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
         android:layout_marginHorizontal="20dp"
-        app:cardCornerRadius="10dp"
-        >
+        android:layout_marginBottom="100dp"
+        app:cardCornerRadius="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,28 +58,28 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginHorizontal="20dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginHorizontal="20dp">
+                android:layout_marginBottom="20dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edittext_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/editT_register_hint"
-                    android:textSize="14sp"
                     android:textColor="@color/gray_200"
-                    android:inputType="textCapWords"/>
+                    android:textSize="14sp" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/button_submit_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/btn_register_text"
-                android:textStyle="normal"
-                android:layout_marginBottom="15dp"
                 android:layout_marginHorizontal="17dp"
-                />
+                android:layout_marginBottom="15dp"
+                android:text="@string/btn_register_text"
+                android:textStyle="normal" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

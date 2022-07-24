@@ -9,4 +9,6 @@
     <color name="gray_200">#959292</color>
     <color name="blue_200">#90CAF9</color>
     <color name="white">#FFFFFF</color>
+    <color name="custom_purple">#7444f4</color>
+    <color name="custom_blue">#5B94FA</color>
 </resources>
