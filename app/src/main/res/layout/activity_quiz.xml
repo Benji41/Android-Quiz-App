@@ -66,6 +66,7 @@
             android:layout_marginBottom="5dp"
             android:padding="15dp"
             android:textSize="18sp"
+            android:background="@drawable/option_border_bg"
             android:text="TextView" />
 
         <TextView
@@ -76,6 +77,7 @@
             android:layout_marginBottom="5dp"
             android:padding="15dp"
             android:textSize="18sp"
+            android:background="@drawable/option_border_bg"
             android:text="TextView" />
 
         <TextView
@@ -86,6 +88,7 @@
             android:layout_marginBottom="5dp"
             android:padding="15dp"
             android:textSize="18sp"
+            android:background="@drawable/option_border_bg"
             android:text="TextView" />
 
         <TextView
@@ -96,6 +99,7 @@
             android:layout_marginBottom="5dp"
             android:padding="15dp"
             android:textSize="18sp"
+            android:background="@drawable/option_border_bg"
             android:text="TextView" />
     </LinearLayout>
 </ScrollView>
