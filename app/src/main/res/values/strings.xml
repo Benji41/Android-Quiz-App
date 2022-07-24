@@ -4,4 +4,5 @@
     <string name="editT_register_hint">Right here</string>
     <string name="greeting">Welcome</string>
     <string name="greeting_subtitle">Please enter your name</string>
+    <string name="question">What country does this flag belong to?</string>
 </resources>
