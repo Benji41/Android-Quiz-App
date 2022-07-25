@@ -97,6 +97,7 @@ class QuizActivity : AppCompatActivity() {
                         }
                     }
                 }else{
+                    rightAnswers++
                     pg_progress.progress = questions.size
                     txt_progress.text="${questions.size} / ${questions.size}"
                     Toast.makeText(this,"Ez PZZZ well done my duder!",Toast.LENGTH_SHORT).show()
@@ -107,8 +108,8 @@ class QuizActivity : AppCompatActivity() {
                     }
                     val intent = Intent(this,ResultActivity::class.java)
                     intent.putExtra(Constants.USER_NAME,userName)
-                    intent.putExtra(Constants.TOTAL_QUESTIONS,questions.size.toString())
-                    intent.putExtra(Constants.CORRECT_ANSWERS,rightAnswers.toString())
+                    intent.putExtra(Constants.TOTAL_QUESTIONS,questions.size)
+                    intent.putExtra(Constants.CORRECT_ANSWERS,rightAnswers)
                     startActivity(intent)
                     finish()
                 }
