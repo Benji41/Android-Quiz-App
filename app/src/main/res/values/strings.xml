@@ -5,4 +5,6 @@
     <string name="greeting">Welcome</string>
     <string name="greeting_subtitle">Please enter your name</string>
     <string name="question">What country does this flag belong to?</string>
+    <string name="submit_answer">SUBMIT</string>
+    <string name="change_question">Go for the next question</string>
 </resources>

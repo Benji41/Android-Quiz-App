@@ -11,4 +11,6 @@
     <color name="white">#FFFFFF</color>
     <color name="custom_purple">#7444f4</color>
     <color name="custom_blue">#5B94FA</color>
+    <color name="right_answer">#FF23F42E</color>
+    <color name="wrong_answer">#F42323</color>
 </resources>

@@ -11,20 +11,21 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/textView_question"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:layout_margin="30dp"
             android:gravity="center_horizontal"
             android:textSize="22sp"
             android:textColor="@color/gray_200"
             tools:text="EXAMPLE" />
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/imageView_country"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_flag_of_brazil" />
@@ -49,7 +50,7 @@
                 android:layout_weight="11" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/textView_progress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
@@ -63,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="20dp"
             android:padding="15dp"
             android:textSize="18sp"
             android:background="@drawable/option_border_bg"
@@ -74,7 +75,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="20dp"
             android:padding="15dp"
             android:textSize="18sp"
             android:background="@drawable/option_border_bg"
@@ -85,21 +86,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="20dp"
             android:padding="15dp"
             android:textSize="18sp"
             android:background="@drawable/option_border_bg"
             android:text="TextView" />
 
-        <TextView
-            android:id="@+id/textView_checkAnswer"
+        <Button
+            android:id="@+id/button_submit_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginBottom="5dp"
-            android:padding="15dp"
-            android:textSize="18sp"
-            android:background="@drawable/option_border_bg"
-            android:text="TextView" />
+            android:layout_marginTop="25dp"
+            android:padding="5dp"
+            android:textSize="20sp"
+            android:text="@string/submit_answer" />
+
+
     </LinearLayout>
 </ScrollView>
