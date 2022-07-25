@@ -98,6 +98,9 @@ class QuizActivity : AppCompatActivity() {
                 }
             }
         }
+        val progressDrawable: Drawable = pg_progress.progressDrawable.mutate()
+        progressDrawable.setColorFilter(super.getResources().getColor(custom_purple), PorterDuff.Mode.SRC_IN)
+        pg_progress.progressDrawable = progressDrawable
     }
    private fun setQuestionView(q:Question){
         txt_question.text = q.question
