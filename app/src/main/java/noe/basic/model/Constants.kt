@@ -4,7 +4,10 @@ import android.provider.Settings.Global.getString
 import noe.basic.quizapp.QuizActivity
 import noe.basic.quizapp.R
 
-object QuestionArchive {
+object Constants {
+    const val USER_NAME : String ="user_name"
+    const val TOTAL_QUESTIONS : String = "total_questions"
+    const val CORRECT_ANSWERS : String = "correct_answers"
     fun getQuestions (context : QuizActivity) : ArrayList<Question>{
         val questions = ArrayList<Question>()
         questions.add(

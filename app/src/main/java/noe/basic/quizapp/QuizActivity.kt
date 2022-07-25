@@ -1,6 +1,6 @@
 package noe.basic.quizapp
 
-import android.graphics.Color
+import android.content.Intent
 import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
 import android.os.Bundle
@@ -9,7 +9,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import noe.basic.model.Question
-import noe.basic.model.QuestionArchive
+import noe.basic.model.Constants
 import noe.basic.quizapp.R.color.custom_purple
 
 class QuizActivity : AppCompatActivity() {
@@ -26,10 +26,13 @@ class QuizActivity : AppCompatActivity() {
     private lateinit var currentQuestion : Question
     private lateinit var answer : String
     private var optionPressed : Int? =0
+    private var rightAnswers : Int =0
+    private lateinit var userName :String
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz)
-        questions = QuestionArchive.getQuestions(this)
+        userName = intent.getStringExtra(Constants.USER_NAME)!!
+        questions = Constants.getQuestions(this)
         Log.i("Preguntas",questions.toString())
         pg_progress = findViewById(R.id.progressBar)
         txt_opt1 = findViewById(R.id.textView_option1)
@@ -57,6 +60,7 @@ class QuizActivity : AppCompatActivity() {
             }else{
                 if(quizProgress < questions.size-1) {
                     if (answer == currentQuestion.answer) {
+                        rightAnswers++
                         currentQuestion = questions[++quizProgress]
                         pg_progress.progress = quizProgress
                         txt_progress.text = "$quizProgress / ${questions.size}"
@@ -85,6 +89,12 @@ class QuizActivity : AppCompatActivity() {
                             txt_opt3.background = ResourcesCompat.getDrawable(super.getResources(),R.drawable.selected_wrong_option_border_bg,null)
                             }
                         }
+                        if(quizProgress < questions.size-1) {
+                            currentQuestion = questions[++quizProgress]
+                            pg_progress.progress = quizProgress
+                            txt_progress.text = "$quizProgress / ${questions.size}"
+                            btn_submit_answer.text = getString(R.string.change_question)
+                        }
                     }
                 }else{
                     pg_progress.progress = questions.size
@@ -95,6 +105,12 @@ class QuizActivity : AppCompatActivity() {
                         1-> txt_opt2.background = ResourcesCompat.getDrawable(super.getResources(),R.drawable.selected_right_option_border_bg,null)
                         2-> txt_opt3.background = ResourcesCompat.getDrawable(super.getResources(),R.drawable.selected_right_option_border_bg,null)
                     }
+                    val intent = Intent(this,ResultActivity::class.java)
+                    intent.putExtra(Constants.USER_NAME,userName)
+                    intent.putExtra(Constants.TOTAL_QUESTIONS,questions.size.toString())
+                    intent.putExtra(Constants.CORRECT_ANSWERS,rightAnswers.toString())
+                    startActivity(intent)
+                    finish()
                 }
             }
         }

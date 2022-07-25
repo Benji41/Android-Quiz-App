@@ -7,4 +7,7 @@
     <string name="question">What country does this flag belong to?</string>
     <string name="submit_answer">SUBMIT</string>
     <string name="change_question">Go for the next question</string>
+    <string name="finish">good to go!</string>
+    <string name="result_title">Results!</string>
+    <string name="result_congrats">Hey, Congratulations!</string>
 </resources>

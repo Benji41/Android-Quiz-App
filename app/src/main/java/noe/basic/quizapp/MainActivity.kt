@@ -6,6 +6,7 @@ import android.text.InputType
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import noe.basic.model.Constants
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
                 it.isLetter()
                 }){
                 val intent = Intent(this,QuizActivity::class.java)
+                intent.putExtra(Constants.USER_NAME,editVName.text.toString())
                 startActivity(intent)
                 finish()
             }
